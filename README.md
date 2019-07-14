@@ -1,2 +1,2 @@
-<img src="https://github.com/IgorShulga/JavaPractice-task-streams.svg?branch=master">
+<img src="https://travis-ci.org/IgorShulga/JavaPractice-task-streams.svg?branch=master">
 # JavaPractice-task-streams
