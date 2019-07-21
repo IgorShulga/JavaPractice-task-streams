@@ -45,7 +45,8 @@ public class HometaskTest {
         //Replace here
         List<String> multipliedNumbersAsString = numbers
                 .stream()
-                .map(integer -> Integer.toString(integer * 2))
+                .map(integer -> integer * 2)
+                .map(Object::toString)
                 .collect(Collectors.toList());
 
         assertThat(multipliedNumbersAsString).contains("2", "4", "6", "8", "10");
@@ -142,7 +143,7 @@ public class HometaskTest {
                         BlogPost::getTitle, blogPost -> blogPost,   //key=Title, value=blogpost
                         (blogPost, blogPost2) -> blogPost2,         //if same key take new blogpost
                         HashMap::new                                //return HashMap
-                        ));
+                ));
 
         assertThat(postPerTitle.get("News item 1").getTitle()).isEqualTo("News item 1");
         assertThat(postPerTitle.get("Tech review 1").getTitle()).isEqualTo("Tech review 1");
